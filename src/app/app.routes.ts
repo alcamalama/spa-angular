@@ -4,6 +4,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
+import { NgModule } from '@angular/core';
 
 const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,4 +15,4 @@ const APP_ROUTES: Routes = [
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
-export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);
+export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, { useHash: true });
